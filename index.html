@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <style>
+      .active {
+        color: white;
+      }
+    </style>
+    <script>
+      function scrollto(no) {
+        console.log("hell");
+        window.scrollTo(0, window.innerHeight * no);
+      }
+    </script>
+  </head>
+  <body class="scroll-smooth" id="bodys" onload="scroll()" onscroll="scroll()">
+    <script>
+      const xy = document.getElementById("bodys").getBoundingClientRect();
+    </script>
+    <div class="flex">
+      <div
+        class="min-w-[17rem] sticky top-0 left-0 h-[100vh] bg-[#bd5d38] text-white flex flex-col justify-center items-center gap-8"
+      >
+        <div class="">
+          <div href="#about">
+            <img
+              src="./img.JPG"
+              height="144px"
+              width="144px"
+              class="rounded-[50%] border-[0.5rem] border-[rgba(255,255,255,0.76)]"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="flex flex-col text-center gap-2">
+          <div
+            id="abt"
+            onclick="scrollto(0)"
+            class="cursor-pointer text-[#FFFFFF80]"
+          >
+            ABOUT
+          </div>
+          <div
+            id="exp"
+            onclick="scrollto(1)"
+            class="cursor-pointer text-[#FFFFFF80]"
+          >
+            EXPERIENCE
+          </div>
+          <div
+            id="edu"
+            onclick="scrollto(2)"
+            class="cursor-pointer text-[#FFFFFF80]"
+          >
+            EDUCATION
+          </div>
+          <div
+            id="skl"
+            onclick="scrollto(3)"
+            class="cursor-pointer text-[#FFFFFF80]"
+          >
+            SKILLS
+          </div>
+          <div
+            id="int"
+            onclick="scrollto(4)"
+            class="cursor-pointer text-[#FFFFFF80]"
+          >
+            INTERESTS
+          </div>
+          <div
+            id="awr"
+            onclick="scrollto(5)"
+            class="cursor-pointer text-[#FFFFFF80]"
+          >
+            AWARDS
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="flex min-h-[100vh] justify-center mx-10 text-[#343a40] flex-col"
+          id="about"
+        >
+          <div class="mb-8">
+            <h1 class="text-[5rem] font-semibold -tracking-wide">
+              BHARADVA <span class="text-[#bd5d38]"> MILAN </span>
+            </h1>
+            <p class="text-xl">
+              2-JASRAJ NAGAR,BEHIND RADHE HOTEL,RAJKOT · +917990892778 ·
+              <a href="mailto:milanbharadva12@gmail.com" class="text-[#bd5d38]">
+                milanbharadva12@gmail.com
+              </a>
+            </p>
+          </div>
+          <p class="text-xl">
+            I am experienced in leveraging agile frameworks to provide div
+            robust synopsis for high level overviews. Iterative approaches to
+            corporate strategy foster collaborative thinking to further the
+            overall value proposition.
+          </p>
+          <div>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="flex h-[100vh] scroll-smooth" id="experience">
+          experience
+        </div>
+        <div class="flex h-[100vh] scroll-smooth" id="education">education</div>
+        <div class="flex h-[100vh] scroll-smooth" id="skills">skills</div>
+        <div class="flex h-[100vh]" id="interests">interests</div>
+        <div class="flex h-[100vh]" id="awards">awards</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function scroll() {
+      function fnc(item) {
+        item.classList.remove("active");
+      }
+      let height = "-" + window.innerHeight;
+      const x = document.getElementById("bodys").getBoundingClientRect();
+      if (height <= x.top - 1) {
+        document.querySelectorAll("div").forEach(fnc);
+        document.getElementById("abt").classList.add("active");
+      } else if (height * 2 <= x.top - 1) {
+        document.querySelectorAll("div").forEach(fnc);
+        document.getElementById("exp").classList.add("active");
+      } else if (height * 3 <= x.top - 1) {
+        document.querySelectorAll("div").forEach(fnc);
+        document.getElementById("edu").classList.add("active");
+      } else if (height * 4 <= x.top - 1) {
+        document.querySelectorAll("div").forEach(fnc);
+        document.getElementById("skl").classList.add("active");
+      } else if (height * 5 <= x.top - 1) {
+        document.querySelectorAll("div").forEach(fnc);
+        document.getElementById("int").classList.add("active");
+      } else if (height * 6 <= x.top - 1) {
+        document.querySelectorAll("div").forEach(fnc);
+        document.getElementById("awr").classList.add("active");
+      }
+    }
+  </script>
+</html>
