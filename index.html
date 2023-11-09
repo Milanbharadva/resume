@@ -31,8 +31,9 @@
               src="./img.JPG"
               height="144px"
               width="144px"
-              class="rounded-[50%] border-[0.5rem] border-[rgba(255,255,255,0.76)]"
+              class="rounded-[50%] cursor-pointer border-[0.5rem] border-[rgba(255,255,255,0.76)]"
               alt=""
+              onclick="scrollto(0)"
             />
           </div>
         </div>
@@ -83,7 +84,7 @@
       </div>
       <div>
         <div
-          class="flex min-h-[100vh] justify-center mx-10 text-[#343a40] flex-col"
+          class="flex min-h-[100vh] justify-center mx-12 text-[#343a40] flex-col"
           id="about"
         >
           <div class="mb-8">
@@ -110,7 +111,38 @@
         <div class="flex h-[100vh] scroll-smooth" id="experience">
           experience
         </div>
-        <div class="flex h-[100vh] scroll-smooth" id="education">education</div>
+        <div
+          class="h-[100vh] flex-1 items-center mx-12 scroll-smooth"
+          id="education"
+        >
+          <div>
+            <h1 class="text-4xl font-semibold mb-10">EDUCATION</h1>
+            <div class="mb-10">
+              <div class="flex items-center justify-between">
+                <h1 class="text-2xl font-semibold text-[#343A40]">
+                  PARTH VIDHYALAYA
+                </h1>
+                <p>August 2019</p>
+              </div>
+              <h1 class="text-lg font-semibold mb-5 text-[#868E96]">
+                COMMERCE
+              </h1>
+              <p>PERCENTAGE: 99%</p>
+            </div>
+            <div>
+              <div class="flex w-full justify-between">
+                <h1 class="text-2xl font-semibold text-[#343A40]">
+                  HARIVANDANA COLLEGE
+                </h1>
+                <p>2021-2024</p>
+              </div>
+              <h1 class="text-lg font-semibold mb-5 text-[#868E96]">
+                Bachlor of Computer Application
+              </h1>
+              <p>PERCENTAGE: 99%</p>
+            </div>
+          </div>
+        </div>
         <div class="flex h-[100vh] scroll-smooth" id="skills">skills</div>
         <div class="flex h-[100vh]" id="interests">interests</div>
         <div class="flex h-[100vh]" id="awards">awards</div>
@@ -146,3 +178,4 @@
     }
   </script>
 </html>
+<!-- npx tailwindcss -i input.css -o ./dist/output.css --watch -->
